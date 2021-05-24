@@ -1,0 +1,32 @@
+#main{
+  margin: 30px 400px auto 400px;
+  text-align: center;
+  height: auto;
+  width: auto;
+  background: yellow;
+  border: 10px solid darkblue;
+  background-color: white;
+  border-radius: 70px;
+  opacity: 70%;
+}
+#main #heading1{
+  text-align: center;
+  color: darkblue;
+  font-size: 20px;
+  padding: 15px;
+}
+#main #table{
+  text-align: center;
+  margin-left: 30px;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-right: 15px;
+
+}
+#main #table .column{
+  padding: 10px;
+  font-weight: bolder;
+}
+#main #table .row{
+  padding: inherit;
+}

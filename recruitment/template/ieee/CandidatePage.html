@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Candidates</title>
+    <link rel="stylesheet" href="{% static 'css/ieee.css'%}">
+    <link rel="stylesheet" href="{% static 'css/CandidatePage.css'%}">
+  </head>
+  <body>
+    <div id='logo'>
+    </div>
+    <div id='back'>
+
+    </div>
+    <div id="imp">
+      <h1>Maulana Azad National Institute Of Technology<span id='small'><br>IEEE</span></h1>
+    </div>
+    <div id='bground'>
+
+    </div>
+    <div id='link'>
+    <a href="/ieee/home-page/">Home</a>
+    <a href="/ieee/register-page/">Registration</a>
+    <a href="/ieee/instruction-page/">Instruction</a>
+    <a href="/ieee/candidate-page/">Candidates</a>
+    <a href="/ieee/logout-page/">Logout</a>
+    </div>
+
+    <div id='main'>
+    <div id='heading1'>
+      <h2>Register Candidates</h2>
+    </div>
+    <div id="table">
+      {% if info %}
+      <table border="5">
+        <thead>
+          <th><div class='column'>Name</div></th>
+          <th><div class='column'>Gender</div></th>
+          <th><div class='column'>Date Of Birth</div></th>
+          <th><div class='column'>Branch</div></th>
+          <th><div class='column'>Phone Number</div></th>
+          <th><div class='column'>Email Id</div></th>
+          <td><div class="column">Edit</div></td>
+          <td><div class="column">Delete</div></td>
+        </thead>
+        {% for e in info %}
+        <tr>
+          <td class="row">{{e.name}}</td>
+          <td class="row">{{e.gender}}</td>
+          <td class="row">{{e.dob}}</td>
+          <td class="row">{{e.branch}}</td>
+          <td class="row">{{e.phone}}</td>
+          <td class="row">{{e.email}}</td>
+          <td> <a href="/ieee/edit-page/?infoid={{e.id}}">Edit</a></td>
+          <td> <a href="/ieee/delete-page/?infoid={{e.id}}">Delete</a> </td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+        <h1>No Candidate Register Yet</h1>
+      {% endif %}
+    </div>
+    </div>
+  </body>
+</html>

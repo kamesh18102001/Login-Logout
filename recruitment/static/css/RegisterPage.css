@@ -1,0 +1,26 @@
+#form #heading{
+  text-align: center;
+  color: darkblue;
+  font-size: 20px;
+}
+#form{
+  margin-left: 450px;
+  margin-right: 450px;
+  border: 10px solid darkblue;
+  height: auto;
+  background-color: white;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-radius: 70px;
+  opacity: 70%;
+  margin-top: 50px;
+}
+.ele{
+  margin-left: 50px;
+}
+.keyword{
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 130px;
+}
+#form #sub{margin-left: 260px;}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit</title>
+    <link rel="stylesheet" href="{% static 'css/ieee.css'%}">
+    <link rel="stylesheet" href="{% static 'css/RegisterPage.css'%}">
+  </head>
+  <body>
+    <div id='logo'>
+    </div>
+    <div id='back'>
+
+    </div>
+    <div id="imp">
+      <h1>Maulana Azad National Institute Of Technology<span id='small'><br>IEEE</span></h1>
+    </div>
+    <div id='bground'>
+
+    </div>
+    <div id='link'>
+    <a href="/ieee/home-page/">Home</a>
+    <a href="/ieee/register-page/">Registration</a>
+    <a href="/ieee/instruction-page/">Instruction</a>
+    <a href="/ieee/candidate-page/">Candidates</a>
+    <a href="/ieee/logout-page/">Logout</a>
+    </div>
+
+    <div id='main'>
+
+    <div id="form">
+      <div id='heading'>
+        <h2>Edit Details</h2>
+      </div>
+      <form action="/ieee/edit/" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="infoid" value="{{info.id}}">
+        <br>
+        <span class='keyword'>Name</span>  :-  <span class="ele">{{form.name}}</span><br><br>
+        <span class='keyword'>Gender</span>  :-  <span class="ele">{{form.gender}}</span> <br><br>
+        <span class='keyword'>Date Of Birth</span>  :-  <span class="ele">{{form.dob}}</span> <br><br>
+        <span class='keyword'>Branch</span>  :-  <span class="ele">{{form.branch}}</span> <br><br>
+        <span class='keyword'>Contact Number</span>  :-  <span class="ele">{{form.phone}}</span> <br><br>
+        <span class='keyword'>Email Id</span>  :-  <span class="ele">{{form.email}}</span> <br>
+        <br><br>
+        <span id='sub'><input type="submit" value="Save"></span>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>

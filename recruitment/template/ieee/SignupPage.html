@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/ieee.css'%}">
+    <style media="screen">
+      #main{
+        margin-left: 350px;
+        margin-right: 350px;
+        border: 10px solid darkblue;
+        height: auto;
+        background-color: white;
+        padding-bottom: 50px;
+        padding-top: 20px;
+        border-radius: 70px;
+        opacity: 70%;
+        margin-top: 50px;
+        width:800px;
+      }
+      #innermain{
+      margin-left: 250px;
+      font-size: 20px;
+      }
+      #button{
+        margin-left: 380px;
+        font-size: 20px;
+      }
+      #button:hover{
+        background-color: green;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='logo'>
+    </div>
+    <div id='back'>
+
+    </div>
+    <div id="imp">
+      <h1>Maulana Azad National Institute Of Technology<span id='small'><br>IEEE</span></h1>
+    </div>
+    <div id='bground'>
+
+    </div>
+    <div id='link'>
+      <a href="/ieee/login-page/">Login</a>
+    </div>
+    <div id=main>
+    <form method="post" action="/ieee/signup-page/">
+      {% csrf_token %}
+      <h2 style="text-align:center;color:darkblue;font-size:30px;">Create Account</h2>
+      <div id='innermain'>
+      {% for i in form %}
+      {{i.label}}
+      {{i}}
+      <br>
+      {% endfor %}
+      <br>
+    </div>
+    <div id='button'><input type="submit" value="Register"></div>
+    </form>
+  </div>
+  </body>
+</html>

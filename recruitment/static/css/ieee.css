@@ -1,0 +1,50 @@
+body{
+  background-position: center;
+  background-image: url("../images/c.jpeg");
+}
+#logo{
+  background-image: url('../images/m.png');
+  height:200px;
+  width:250px;
+}
+#back{
+  height: 200px;
+  width: 1260px;
+  background: lightblue;
+  margin-left: 250px;
+  margin-top: -200px;
+}
+#imp h1{
+  height: 200px;
+  width: 1150px;
+  margin: -180px auto auto 300px;
+  text-align: center;
+  font-size: 50px;
+}
+#imp #small{font-size: 45px;}
+
+
+#link{
+  text-align: center;
+  background: yellow;
+  height: 25px;
+  padding-bottom:5px;
+  padding-top: 5px;
+
+
+}
+#link a{
+  margin-left: 10px;
+  color: red;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+
+}
+#link a:hover
+{
+  background-color: red;
+  color: white;
+}

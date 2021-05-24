@@ -1,0 +1,21 @@
+#main{
+  margin-left: 450px;
+  margin-right: 450px;
+  border: 10px solid darkblue;
+  height: auto;
+  background-color: white;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  border-radius: 70px;
+  opacity: 70%;
+  margin-top: 50px;
+  text-align: center;
+  font-weight:bold;
+  font-size: 20px;
+}
+#login{
+  font-size: 20px;
+}
+#username,#password{
+  padding-right:10px;
+}
